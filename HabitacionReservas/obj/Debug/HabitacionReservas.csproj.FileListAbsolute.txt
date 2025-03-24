@@ -1,0 +1,10 @@
+C:\Users\deivy\source\repos\HabitacionReservas\HabitacionReservas\bin\Debug\HabitacionReservas.exe.config
+C:\Users\deivy\source\repos\HabitacionReservas\HabitacionReservas\bin\Debug\HabitacionReservas.exe
+C:\Users\deivy\source\repos\HabitacionReservas\HabitacionReservas\bin\Debug\HabitacionReservas.pdb
+C:\Users\deivy\source\repos\HabitacionReservas\HabitacionReservas\obj\Debug\HabitacionReservas.csproj.AssemblyReference.cache
+C:\Users\deivy\source\repos\HabitacionReservas\HabitacionReservas\obj\Debug\HabitacionReservas.Form1.resources
+C:\Users\deivy\source\repos\HabitacionReservas\HabitacionReservas\obj\Debug\HabitacionReservas.Properties.Resources.resources
+C:\Users\deivy\source\repos\HabitacionReservas\HabitacionReservas\obj\Debug\HabitacionReservas.csproj.GenerateResource.cache
+C:\Users\deivy\source\repos\HabitacionReservas\HabitacionReservas\obj\Debug\HabitacionReservas.csproj.CoreCompileInputs.cache
+C:\Users\deivy\source\repos\HabitacionReservas\HabitacionReservas\obj\Debug\HabitacionReservas.exe
+C:\Users\deivy\source\repos\HabitacionReservas\HabitacionReservas\obj\Debug\HabitacionReservas.pdb
