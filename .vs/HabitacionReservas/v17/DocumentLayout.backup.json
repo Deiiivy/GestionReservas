@@ -7,11 +7,11 @@
       "RelativeMoniker": "D:0:0:{B923D136-C033-4E8E-98B2-12C224735CC1}|HabitacionReservas\\HabitacionReservas.csproj|solutionrelative:habitacionreservas\\habitacionestandar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B923D136-C033-4E8E-98B2-12C224735CC1}|HabitacionReservas\\HabitacionReservas.csproj|c:\\users\\deivy\\source\\repos\\habitacionreservas\\habitacionreservas\\reserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B923D136-C033-4E8E-98B2-12C224735CC1}|HabitacionReservas\\HabitacionReservas.csproj|C:\\Users\\deivy\\source\\repos\\HabitacionReservas\\habitacionreservas\\reserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B923D136-C033-4E8E-98B2-12C224735CC1}|HabitacionReservas\\HabitacionReservas.csproj|solutionrelative:habitacionreservas\\reserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B923D136-C033-4E8E-98B2-12C224735CC1}|HabitacionReservas\\HabitacionReservas.csproj|c:\\users\\deivy\\source\\repos\\habitacionreservas\\habitacionreservas\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{B923D136-C033-4E8E-98B2-12C224735CC1}|HabitacionReservas\\HabitacionReservas.csproj|C:\\Users\\deivy\\source\\repos\\HabitacionReservas\\habitacionreservas\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{B923D136-C033-4E8E-98B2-12C224735CC1}|HabitacionReservas\\HabitacionReservas.csproj|solutionrelative:habitacionreservas\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "HabitacionReservas\\HabitacionEstandar.cs",
               "ToolTip": "C:\\Users\\deivy\\source\\repos\\HabitacionReservas\\HabitacionReservas\\HabitacionEstandar.cs",
               "RelativeToolTip": "HabitacionReservas\\HabitacionEstandar.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAgAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-24T18:16:04.288Z",
               "EditorCaption": ""
@@ -51,8 +51,7 @@
               "RelativeToolTip": "HabitacionReservas\\Reserva.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAowCEAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T18:12:20.363Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T18:12:20.363Z"
             },
             {
               "$type": "Document",
@@ -63,8 +62,7 @@
               "ToolTip": "C:\\Users\\deivy\\source\\repos\\HabitacionReservas\\HabitacionReservas\\Form1.cs [Dise\u00F1o]",
               "RelativeToolTip": "HabitacionReservas\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T22:45:36.964Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-03-24T22:45:36.964Z"
             }
           ]
         }
