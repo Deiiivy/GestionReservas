@@ -4,31 +4,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace HabitacionReservas
 {
-   public class HabitacionVIP : Reserva
+    public class HabitacionVIP : Reserva
     {
+        private const double Descuento = 0.2;
         public double TarifaFija { get; set; }
-        public const double Descuesto = 0.2;
+        public override double Tarifa => TarifaFija;
 
-        public HabitacionVIP(string nombreCliente, int numeroHabitacion, DateTime fechaReserva,
-            int duracionEstandia, double tarifaFija)
+        public override double CostoTotal => CalcularCosto(); 
+
+        public HabitacionVIP(string nombreCliente, int numeroHabitacion, DateTime fechaReserva, int duracionEstandia, double tarifa)
             : base(nombreCliente, numeroHabitacion, fechaReserva, duracionEstandia)
         {
-            if (tarifaFija <= 0)
+            if (tarifa <= 0)
             {
-                throw new ArgumentException("La tarifa fija no puede ser menor o igual a 0");
+                throw new ArgumentException("La tarifa no puede ser menor o igual a 0");
             }
-            TarifaFija = tarifaFija;
+
+            TarifaFija = tarifa;
         }
 
         public override double CalcularCosto()
         {
-           double costoTotal = DuracionEstandia * TarifaFija;
-         
-            if(DuracionEstandia > 5)
+            double costoTotal = DuracionEstandia * Tarifa;
+            if (DuracionEstandia > 5)
             {
-                costoTotal -= costoTotal * Descuesto;
+                costoTotal -= costoTotal * Descuento;
             }
             return costoTotal;
         }

@@ -13,10 +13,14 @@ namespace HabitacionReservas
 
         public DateTime FechaReserva { get; set; }
         public int DuracionEstandia { get; set; }
+        public abstract double CostoTotal { get; }
+        public abstract double Tarifa { get; }
+
+        public virtual string TipoHabitacion => GetType().Name;
 
         public Reserva(string nombreCliente, int numeroHabitacion, DateTime fechaReserva, int duracionEstandia)
         {
-            if(!string.IsNullOrEmpty(nombreCliente))
+            if(string.IsNullOrEmpty(nombreCliente))
             {
                 throw new ArgumentException("El nombre del cliente no puede estar vacio");
             }

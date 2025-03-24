@@ -8,3 +8,4 @@ C:\Users\deivy\source\repos\HabitacionReservas\HabitacionReservas\obj\Debug\Habi
 C:\Users\deivy\source\repos\HabitacionReservas\HabitacionReservas\obj\Debug\HabitacionReservas.csproj.CoreCompileInputs.cache
 C:\Users\deivy\source\repos\HabitacionReservas\HabitacionReservas\obj\Debug\HabitacionReservas.exe
 C:\Users\deivy\source\repos\HabitacionReservas\HabitacionReservas\obj\Debug\HabitacionReservas.pdb
+C:\Users\deivy\source\repos\HabitacionReservas\HabitacionReservas\obj\Debug\HabitacionReservas.FormReserva.resources
