@@ -74,28 +74,39 @@ namespace HabitacionReservas
                 return;
             }
 
-            int numeroHabitacion = Convert.ToInt32(dgvReservas.SelectedRows[0].Cells["NumeroHabitacion"].Value);
-            DateTime fechaReserva = Convert.ToDateTime(dgvReservas.SelectedRows[0].Cells["FechaReserva"].Value);
-            string nombreActual = dgvReservas.SelectedRows[0].Cells["NombreCliente"].Value.ToString();
-            int duracionActual = Convert.ToInt32(dgvReservas.SelectedRows[0].Cells["DuracionEstandia"].Value);
+            var selectedRow = dgvReservas.SelectedRows[0];
 
-          
-            string nuevoNombre = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el nuevo nombre del cliente:", "Editar Reserva", nombreActual);
-            string nuevaDuracionStr = Microsoft.VisualBasic.Interaction.InputBox("Ingrese la nueva duración de la estadía (número de noches):", "Editar Reserva", duracionActual.ToString());
-            string nuevoNumeroHabitacionStr = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el nuevo número de habitación:", "Editar Reserva", numeroHabitacion.ToString());
-            string nuevaFechaStr = Microsoft.VisualBasic.Interaction.InputBox("Ingrese la nueva fecha de la reserva (yyyy-MM-dd):", "Editar Reserva", fechaReserva.ToString("yyyy-MM-dd"));
-
-            if (string.IsNullOrWhiteSpace(nuevoNombre) ||
-                !int.TryParse(nuevaDuracionStr, out int nuevaDuracion) ||
-                !int.TryParse(nuevoNumeroHabitacionStr, out int nuevoNumeroHabitacion) ||
-                !DateTime.TryParse(nuevaFechaStr, out DateTime nuevaFechaReserva))
+           
+            if (selectedRow.Cells["NumeroHabitacion"].Value == null ||
+                selectedRow.Cells["FechaReserva"].Value == null ||
+                selectedRow.Cells["NombreCliente"].Value == null ||
+                selectedRow.Cells["DuracionEstandia"].Value == null)
             {
-                MessageBox.Show("Datos inválidos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("La fila seleccionada no contiene datos válidos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             try
             {
+                int numeroHabitacion = Convert.ToInt32(selectedRow.Cells["NumeroHabitacion"].Value);
+                DateTime fechaReserva = Convert.ToDateTime(selectedRow.Cells["FechaReserva"].Value);
+                string nombreActual = selectedRow.Cells["NombreCliente"].Value.ToString();
+                int duracionActual = Convert.ToInt32(selectedRow.Cells["DuracionEstandia"].Value);
+
+                string nuevoNombre = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el nuevo nombre del cliente:", "Editar Reserva", nombreActual);
+                string nuevaDuracionStr = Microsoft.VisualBasic.Interaction.InputBox("Ingrese la nueva duración de la estadía (número de noches):", "Editar Reserva", duracionActual.ToString());
+                string nuevoNumeroHabitacionStr = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el nuevo número de habitación:", "Editar Reserva", numeroHabitacion.ToString());
+                string nuevaFechaStr = Microsoft.VisualBasic.Interaction.InputBox("Ingrese la nueva fecha de la reserva (yyyy-MM-dd):", "Editar Reserva", fechaReserva.ToString("yyyy-MM-dd"));
+
+                if (string.IsNullOrWhiteSpace(nuevoNombre) ||
+                    !int.TryParse(nuevaDuracionStr, out int nuevaDuracion) ||
+                    !int.TryParse(nuevoNumeroHabitacionStr, out int nuevoNumeroHabitacion) ||
+                    !DateTime.TryParse(nuevaFechaStr, out DateTime nuevaFechaReserva))
+                {
+                    MessageBox.Show("Datos inválidos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 GestorReservas.Instancia.EditarReserva(numeroHabitacion, fechaReserva, nuevoNumeroHabitacion, nuevaFechaReserva, nuevoNombre, nuevaDuracion);
                 MessageBox.Show("Reserva editada correctamente.");
                 CargarReservas();

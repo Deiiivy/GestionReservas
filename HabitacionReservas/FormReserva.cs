@@ -32,8 +32,14 @@ namespace HabitacionReservas
 
                 GestorReservas.Instancia.AgregarReserva(_tipoHabitacion, nombreCliente, numeroHabitacion, fechaReserva, duracion, tarifa);
 
+             
                 MessageBox.Show($"Reserva de habitación {_tipoHabitacion} realizada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
+            }
+            catch (ArgumentException ex)
+            {
+            
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (FormatException)
             {
@@ -44,5 +50,6 @@ namespace HabitacionReservas
                 MessageBox.Show("Error al realizar la reserva: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
     }
 }

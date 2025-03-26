@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace HabitacionReservas
 {
@@ -49,9 +50,13 @@ namespace HabitacionReservas
                     throw new ArgumentException("La duración de la estancia debe ser mayor a 1 noche.");
                 }
 
-                if (_reserva.Any(r => r.NumeroHabitacion == numeroHabitacion && r.FechaReserva.Date == fechaReserva.Date))
+                DateTime fechaFinReserva = fechaReserva.AddDays(duracion - 1);
+
+                if (_reserva.Any(r =>
+                    r.NumeroHabitacion == numeroHabitacion &&
+                    (fechaReserva < r.FechaReserva.AddDays(r.DuracionEstandia) && fechaFinReserva >= r.FechaReserva)))
                 {
-                    throw new ArgumentException("La habitación ya está reservada para la fecha seleccionada.");
+                    throw new ArgumentException("La habitación ya está reservada en el rango de fechas seleccionado.");
                 }
 
                 Reserva reserva = ReservaFactory.CrearReserva(
@@ -61,13 +66,16 @@ namespace HabitacionReservas
             }
             catch (ArgumentException ex)
             {
-                Console.WriteLine($"Error al agregar reserva: {ex.Message}");
+                throw; 
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error inesperado al agregar reserva: {ex.Message}");
+                throw new Exception("Error inesperado al agregar reserva: " + ex.Message);
             }
         }
+
+
+
 
         public void EliminarReserva(int numeroHabitacion, DateTime fechaReserva)
         {
